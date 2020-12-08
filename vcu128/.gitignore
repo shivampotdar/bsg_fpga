@@ -1,5 +1,7 @@
 /black-parrot*
 /vcu128_test*
+*.bit
+*.ltx
 vivado*
 hs_err*
 webtalk*
