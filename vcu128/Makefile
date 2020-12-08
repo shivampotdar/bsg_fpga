@@ -18,8 +18,9 @@ blackparrot_commit := 5b8a807
 
 vivado_bin := $(XILINX_VIVADO)/bin/vivado
 
-project_dir := $(THIS_DIR)/vcu128_test
-project_xpr_dir := $(project_dir)/vcu128_test.xpr
+project_name := vcu128_test
+project_dir := $(THIS_DIR)/$(project_name)
+project_xpr_dir := $(project_dir)/$(project_name).xpr
 build_tcl_dir := $(THIS_DIR)/bp_fpga.tcl
 
 script_dir := $(THIS_DIR)/script
@@ -48,6 +49,10 @@ open:
 
 generate_bitstream:
 	$(vivado_bin) -mode batch -source $(generate_tcl)
+
+copy_programming_files:
+	cp $(project_dir)/$(project_name).runs/impl_1/design_1_wrapper.bit .
+	cp $(project_dir)/$(project_name).runs/impl_1/design_1_wrapper.ltx .
 
 program_fpga:
 	sudo $(vivado_bin) -mode batch -source $(program_tcl_dir)
