@@ -10,24 +10,14 @@ set_property PACKAGE_PIN BF41     [get_ports {pcie_perstn}]
 set_property IOSTANDARD  LVCMOS12 [get_ports {pcie_perstn}]
 
 # LEDs
-# WARNING: Mappings are different from VCU128 user guide and schematic
-# This board is Rev1.0 Ver00, which has several bugs
-# LED1 in schematic
-set_property PACKAGE_PIN BG24    [get_ports {led[7]}]
-# LED2 in schematic
-set_property PACKAGE_PIN BG25    [get_ports {led[6]}]
-# LED3 in schematic
-set_property PACKAGE_PIN BF25    [get_ports {led[5]}]
-# LED4 in schematic
-set_property PACKAGE_PIN BF26    [get_ports {led[4]}]
-# LED5 in schematic
-set_property PACKAGE_PIN BF27    [get_ports {led[3]}]
-# LED6 in schematic
-set_property PACKAGE_PIN BG27    [get_ports {led[2]}]
-# LED7 in schematic
-set_property PACKAGE_PIN BG28    [get_ports {led[1]}]
-# LED0 in schematic
 set_property PACKAGE_PIN BH24    [get_ports {led[0]}]
+set_property PACKAGE_PIN BG24    [get_ports {led[1]}]
+set_property PACKAGE_PIN BG25    [get_ports {led[2]}]
+set_property PACKAGE_PIN BF25    [get_ports {led[3]}]
+set_property PACKAGE_PIN BF26    [get_ports {led[4]}]
+set_property PACKAGE_PIN BF27    [get_ports {led[5]}]
+set_property PACKAGE_PIN BG27    [get_ports {led[6]}]
+set_property PACKAGE_PIN BG28    [get_ports {led[7]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {led[*]}]
 
 # Reset

@@ -164,8 +164,10 @@ module design_1_wrapper
   assign led[0] = pcie_lnk_up;
   assign led[1] = apb_complete;
   
-  assign led[5:4] = ~rstn;
-  assign led[7:6] = rstn;
+  assign led[4] = ~rstn;
+  assign led[5] = ~rstn;
+  assign led[6] = rstn;
+  assign led[7] = rstn;
   
   // mig_reset
   logic mig_reset;
