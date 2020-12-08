@@ -50,7 +50,7 @@ open:
 generate_bitstream:
 	$(vivado_bin) -mode batch -source $(generate_tcl)
 
-copy_programming_files:
+copy_bitstream:
 	cp $(project_dir)/$(project_name).runs/impl_1/design_1_wrapper.bit .
 	cp $(project_dir)/$(project_name).runs/impl_1/design_1_wrapper.ltx .
 
